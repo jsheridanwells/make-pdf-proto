@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+
+        button {
+            margin: 0.3em;
+        }
+
+        table { 
+            
+        }
+
+        td {
+            margin: 2em;
+            padding: 0.8em;
+            border: 1px solid #000;
+        }
+
+        .row {
+            margin: 2em 0;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+
+    <title>Book 2 Pdf Proto</title>
+</head>
+
+<body ng-app="book2pdf">
+    <div class="container" ng-controller="pdfController">
+        <div class="row">
+            <div class="col-9">
+                <h1>Book 2 Pdf Proto</h1>
+            </div>
+            <div class="col-3">                
+                <button ng-click="openPdf()">Open PDF</button>
+                <button ng-click="downloadPdf()">Download PDF</button>
+                <button type="button" ng-csv="tableArr" filename="BookRollAnalytics.csv">Download CSV</button>
+                <button ng-click="reset()">Reset</button>
+            </div>
+        </div>
+        <table>
+            <tr ng-repeat="row in tableArr">
+                <td><p><strong>{{row[0]}}</strong></p></td>
+                <td><p>{{row[1]}}</p></td>
+                <td><p>{{row[2]}}</p></td>
+                <td><p>{{row[3]}}</p></td>
+                <td><p>{{row[4]}}</p></td>
+            </tr>
+        </table>
+    
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="node_modules/pdfmake/build/pdfmake.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+<<<<<<< HEAD
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/ng-csv/build/ng-csv.min.js"></script>
+=======
+>>>>>>> 13ad6d432034aefca0d1f57f7ee04d7fabb99e50
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+    <script src="vfs_fonts.js"></script>
+</body>
+
+</html>
